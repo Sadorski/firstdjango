@@ -9,4 +9,15 @@ def new(request):
     return HttpResponse(response)
 
 def create(request):
-    return redirect('/new')
+    return redirect('/')
+
+def show(request, id=None, *args, **kwargs):
+    response = "placeholder to display blog {}".format(id)
+    return HttpResponse(response)
+
+def edit(request, id=None, *args, **kwargs):
+    response = "To edit blog {} later".format(id)
+    return HttpResponse(response)
+
+def destroy(request, id=None, *args, **kwargs):
+    return redirect('/')
